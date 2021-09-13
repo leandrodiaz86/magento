@@ -27,8 +27,9 @@ class Mobbex_Mobbex_Model_Customfield extends Mage_Core_Model_Abstract
             ->addFieldToFilter('field_name', $field_name)
             ->getColumnValues($searched_column);
 
+        /** SE ROMPE TODOOOOOOOOOOOO
         foreach ($collection as $custom_field) {
-        }
+        } */
 
         if ($searched_column == 'data' && is_string($custom_field) && is_array(json_decode($custom_field)))
             $custom_field = json_decode($custom_field);
